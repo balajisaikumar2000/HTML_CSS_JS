@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event-Listener</title>
+</head>
+<body>
+   <div id="page">
+      <h1>List King</h1>
+      <h2>New Account</h2>
+      <form method="post" action="http://www.example.org/register">
+
+        <label for="username">Create a username: </label>
+        <input type="text" id="username" />
+        <div id="feedback"></div>
+
+        <label for="password">Create a password: </label>
+        <input type="password" id="password" />
+
+        <input type="submit" value="sign up" />
+
+      </form>
+  </div>
+  <script>
+
+/*  function checkUsername() {                            // Declare function
+    var elMsg = document.getElementById('feedback');
+    if (this.value.length < 5) {                        // If username too short
+      elMsg.textContent = 'Username must be 5 characters or more';  // Set msg
+    } else {                                            // Otherwise
+      elMsg.textContent = '';                           // Clear message
+     }
+    }
+    var elUsername = document.getElementById('username'); // Get username input
+        //When it loses focus call checkUsername()
+     elUsername.addEventListener('blur',checkUsername,false);            */
+
+    var elUsername = document.getElementById('username'); // Get username input
+    var elMsg = document.getElementById('feedback');       //Get feedback element
+
+    function checkUsername(minLength) {                    //Declare function
+      if (elUsername.value.length < minLength) {          //if username too short
+      //Set the error message
+      elMsg.textContent = 'Username must be ' + minLength + 'Characters or more';
+     } else{                                                                            //Otherwise
+       elMsg.innerHTML = '';                                                          //Clear msg
+      }
+    }
+    elUsername.addEventListener('blur',function(){
+    checkUsername(6)
+    },false);                                              //Pass arguments here
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>

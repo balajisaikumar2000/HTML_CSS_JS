@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bullseye! Tutoring</title>
+    <style type="text/css">
+        body{
+           background-image:linear-gradient(#08d0f8,#5bd2ae);
+           text-align:center;}
+        img{
+          filter:opacity(50%);}
+        section#blackboard{
+           border:2px solid silver;}
+    </style>
+</head>
+<body>
+ <section id="page2">
+     <h1>Bullseye</h1>
+     <img src="images/teacher.png" id = "teacher2" alt="" />
+     <section id="blackboard"></section>
+ </section>
+ <script>
+     var table = 3;                //Unit of table
+     var operator  = 'addition' ;  //Type of calculation (defaults to addition)
+     var i =1;                     //Set counter to 1
+     var msg = '';                  //Message
+
+     if (operator === 'addition' ){      //if the operator variable says addition
+      while(i < 11){                       //While counter is less than 11
+        msg += i + '+ ' + table + ' = ' + ( i + table) + '<br/>';       //Calculation
+        i++;                                   //Add 1 to the counter
+       }
+      }else{                                   //Otherwise
+       while(i < 11){                           //While counter is less than 11
+         msg += i + ' x ' + table + ' = ' + (i * table) + '<br/>';    //Calculation
+         i++;                                                //Add 1 to the counter
+       }
+      }
+
+      var el = document.getElementById('blackboard');
+      el.innerHTML =msg;
+ </script>
+
+</body>
+</html>

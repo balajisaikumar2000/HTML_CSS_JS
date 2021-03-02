@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANIMATIONS</title>
+    <style type="text/css">
+        div{
+           width:250px;
+           height:250px;
+           background-color:red;
+           animation-name:example;
+           animation-duration:10s;}
+        @keyframes example{
+           from{background-color:red;}
+           to{background-color:yellow;}
+           }
+        div.one{
+          width:250px;
+          height:250px;
+          background-color:red;
+          animation-name:percentages;
+          animation-duration:5s;
+          animation-delay:2s;
+          animation-direction:reverse;}
+        @keyframes percentages{
+          0%{background-color:red;}
+          25%{background-color:yellow;}
+          50%{background-color:blue;}
+          100%{background-color:green;}}
+        div.two{
+          width:100px;
+          height:100px;
+          background-color:red;
+          position:relative;
+          animation-name:position;
+          animation-duration:4s;
+          animation-delay:1s;
+          animation-iteration-count:infinite;
+          animation-direction:normal;}
+        @keyframes position{
+          0%{background-color:red;left:0px;top:0px;}
+          25%{background-color:yellow;left:200px;top:0px;}
+          50%{background-color:blue;left:200px;top:200px;}
+          75%{background-color:green;left:0px;top:200px;}
+          100%{background-color:red;left:0px;top:0px;}}
+        section{
+          width:200px;
+          height:200px;
+          background-color:red;
+          position:relative;
+          animation:balaji 10s linear 5s 3 reverse;}      /*animation-name,animation-duration,animation-timing-function,animation-delay,animation-iteration-count,animation-direction*/
+        @keyframes balaji{                                                                   /*ease*/                                                              /*normal*/
+          0%{background-color:red;left:0px;top:0px;}                                         /*linear*/                                                            /*reverse*/
+          25%{background-color:yellow;left:200px;top:0px;}                                   /*ease-in*/                                                           /*alternate*/
+          50%{background-color:blue;left:200px;top:200px;}                                   /*ease-out*/                                                          /*alternate-reverse*/
+          75%{background-color:green;left:0px;top:200px;}                                    /*ease-in-out*/
+          100%{background-color:red;left:0px;top:0px;}}
+    </style>
+</head>
+<body>
+ <P><B>NOTE:</B>this example does not work in internet explorer.</P>
+ <div></div>
+ <hr>
+ <div class="one"></div>
+ <hr>
+ <div class="two"></div>
+ <hr>
+ <section>
+ </section>
+ <p><b>Note:</b>When an animation is finished,it changes back to it's original style.</p>
+
+</body>
+</html>

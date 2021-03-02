@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms(spl)</title>
+    <style type="text/css">
+        fieldset{
+                width:350px;
+                border:1px solid #dcdcdc;
+                border-radius:50px;
+                padding:20px;
+                text-align:left;}
+        legend{
+                background-color:silver;
+                border:1px solid #dcdcdc;
+                border-radius:10px;
+                padding:10px 20px;
+                text-align:left;
+                text-transform:uppercase;}
+        p.s{
+               text-align:right;}
+        div{
+            border-bottom:1px solid #efefef;
+            margin:10px;
+            padding-bottom:10px;
+            width:260px;}
+        .title{
+            float:left;
+            width:100px;
+            text-align:left;
+            padding-rigtht:10px;}
+        .radio-buttons label{
+            float:none;}
+        input[id="submit"]{
+            border-radius:10px;
+            text-align:right;}
+        p.q{
+            border-radius:20px;
+            text-align:right;}
+        a{
+            cursor:move;}
+
+    </style>
+</head>
+<body>
+ <p>Text input:   <input type="text" name="username"/></p>
+ <p>Password:  <input type="password" name="password"/></p>
+ <p>Textarea:   <textarea name="comments" cols="20" rows="4" placeholder="enter your comments..."></textarea></p>
+ <p>select Box:<select name="selectbox">
+     <option value="option1">option1</option>
+     <option value="option2">option2</option>
+     <option value="option3">option3</option>
+ </select>
+ </p>
+ <p>Radio Buttons:<input type="radio" name="genre" value="radio1" checked="checked"/>radio1<input type="radio" name="genre" value="radio2" />radio2<input type="radio" name="genre" value="radio3" />radio3</p>
+ <p><input type="checkbox" name="genre" value="clear"/>checkbox</p>
+ <p><input type="submit" name="subscribe" value="submit"/></p>
+ <hr>
+ <form action="http://www.example.com/upload.php" method="post">
+  <fieldset>
+     <legend>newsletter</legend>
+     <p class="n">Name:<input type="text" name="username"/></p>
+     <p class="e">Email:<input type="email" name="email" required="required"/></p>
+     <p class="s"><input type="submit" name="subscribe" value="Subscribe"/><p>
+  </fieldset>
+ </form>
+ <hr/>
+ <form action="example.php" method="post">
+     <div>
+         <label class="title" for="name" >Name:</label>
+         <input type="text" id="name" name="name"/>
+     </div>
+     <div>
+         <label class="title" for="email">Email:</label>
+         <input type="email" id="email" name="email"/>
+     </div>
+     <div>
+         <span class="title">Gender:</span>
+         <input type="radio" name="gender" id="male" value="m"/>
+         <label for="male">Male</label>
+         <input type="radio" name="gender" id ="female" value="f"/>
+         <label for="female">Female</label>
+     </div>
+     <div>
+         <p class="q"><input type="submit" value="Register" id="submit"/></p>
+     </div>
+     <hr>
+     <a href="http://www.whitmanarchive.org">Walt Whitman</a>
+ </form>
+</body>
+</html>

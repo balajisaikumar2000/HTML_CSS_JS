@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inner_HTML</title>
+    <style type="text/css">
+        body{
+            color:whie;}
+        li{
+           border:1px solid black;}
+        ul{
+          width:200px;
+          color:white;}
+        .hot{
+            BACKGROUND-COLOR:red;}
+        .cool{
+            background-color:#6cc0ac;}
+        #four{
+             background-color:orange;}
+    </style>
+</head>
+<body>
+  <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+      </ul>
+  </div>
+  <script>
+      var firstItem = document.getElementById('one');
+
+      var itemContent = firstItem.innerHTML;
+
+      firstItem.innerHTML = '';
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>angular-controller</title>
+    <script src="Angular/angular.min.js"></script>
+    <script src="javascript/angular-controller.js"></script>
+</head>
+<body>
+ <table ng-controller="BasketCtrl">
+     <tr><td>Item:</td><td>{{ description }}</td></tr>
+     <tr><td>Cost:</td><td>${{ cost }}</td></tr>
+     <tr><td>Qty:</td><td><input type="number" ng-model="qty"></td></tr>
+     <tr><td>Subtotal:</td><td>{{qty * cost | currency }}</td></tr>
+ </table>
+</body>
+</html>

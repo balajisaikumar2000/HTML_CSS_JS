@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>accordion</title>
+    <style type="text/css">
+        .accordion-panel{
+           display:none;}
+    </style>
+</head>
+<body>
+ <ul class="accordion">
+     <li>
+         <button class="accordion-control">Classics</button>
+         <div class="accordion-panel"><p>If you like your flavors traditional, Monsieur Pigeon's classic marshmallows won't disappoint. With luxuriously <strong>Velvety Vanilla</strong>, <strong>Charming Chocolate</strong>, and <strong>Sumptuous Strawberry</strong>, the favorites you love are treated with the respect and dignity they deserve!</div>
+     </li>
+     <li>
+         <button class="accordion-control">The Flower Series</button>
+         <div class="accordion-panel">Take your tastebuds for a gentle stroll through an English garden filled with Monsieur Pigeon's beautifully fragrant Flower Series marshmallows. With three sweetly floral options: <strong>Elderberry</strong>, <strong>Rose Petal</strong>, and <strong>Chrysanthemum</strong> - all edible and all naturally flavored - they will have you dreaming of butterflies and birdsong in no time</div>
+     </li>
+     <li>
+         <button class="accordion-control">Salt o' the Sea</button>
+         <div class="accordion-panel">Ahoy! If you long for a taste of organic sea salt mixed in with your sweet Monsieur Pigeon marshmallows, look no further than our Salt o' the Sea range. Featuring two delicious flavors: <strong>Salted Caramel</strong> and <strong>Cashew Butter</strong>, this sweetly salty duo will expand your taste horizons.</div>
+     </li>
+ </ul>
+ <script src="jquery-3.5.1.js"></script>
+ <script>
+  $('.accordion').on('click','.accordion-control',  function(e){ // When clicked
+  e.preventDefault();                    // Prevent default action of button
+  $(this)                                // Get the element the user clicked on
+    .next('.accordion-panel')            // Select following panel
+    .not(':animated')                    // If it is not currently animating
+    .slideToggle();                      // Use slide toggle to show or hide it
+});
+ </script>
+</body>
+</html>

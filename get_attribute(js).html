@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get-attribute</title>
+    <style type="text/css">
+        li{
+           border:1px solid black;
+           width:200px;}
+        .hot{
+            background-color:red;}
+        .cool{
+            background-color:#6cc0ac;}
+        .complete{
+           background-color:yellow;}
+    </style>
+</head>
+<body>
+ <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four" >balsamic vinegar</li>
+      </ul>
+      <div id="scriptResults"></div>
+ </div>
+ <script>
+     /* var firstItem = document.getElementById('one');
+
+     if(firstItem.hasAttribute('class')){
+        var attr = firstItem.getAttribute('class');
+
+        var el = document.getElementById('scriptResults');
+        el.innerHTML = '<p>The first item has a class name: ' +attr + '</p>';
+     } */
+
+  /* var firstItem = document.getElementById('one');
+     firstItem.className = 'complete';
+
+     var fourthItem = document.getElementsByTagName('li').item(3);
+     fourthItem.setAttribute('class','cool');                    */
+
+    var firstItem = document.getElementById('one');
+    if(firstItem.hasAttribute('class')){
+       firstItem.removeAttribute('class');
+    }
+
+
+ </script>
+</body>
+
+</html>

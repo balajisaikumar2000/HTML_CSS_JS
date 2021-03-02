@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flash,Video and Audio</title>
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/swfobjetc/2.2/swfobjetc.js"></script>
+    <script type="text/javascript"
+         var flasdhvars={};
+         var params = {movie:"../vidoe/puppy.flv"};
+         swfobjetc.embedSWF("flash/osplayer.swf","snow","400","320","8.0.0",flashvars,params);</script>
+</head>
+<body>
+ <video poster="images/puppy.jpg" width="400" height="320" controls="controls">
+ <source src="video/puppy.mp4" type='video/mp4;codecs="avcl.42E01E,mp4a.40.2"'/>
+ <source src='video/puppy.webm," type='vidoe/webm;codecs="vp8,vorbis"'/>
+ <div id="snow">
+  <p>you cannot see this video of apuppy playing inthr snow because this browser  does niot support our vidoe formats.</p>
+ </div>
+ </video>
+</body>
+</html>

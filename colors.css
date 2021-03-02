@@ -1,0 +1,12 @@
+body{
+background-color:hsla(0,0%,78%);}
+/* color name */
+h1
+  {background-color:DarkCyan;}
+ /* hex code*/
+h2{
+  background-color:#ee3e80;}
+ /* rgb value */
+p{
+  background-color:hsla(0,100%,100%,0.5);
+  padding:10px;}

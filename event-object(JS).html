@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event-object</title>
+</head>
+<body>
+  <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+      </ul>
+  </div>
+  <script src="jquery-3.5.1.js"></script>
+  <script>
+      $(function(){
+        $('li').on('click' ,function(e){
+          $('li span').remove();
+          var date = new Date();
+          date.setTime(e.timeStamp);
+          var clicked = date.toDateString();
+          $(this).append('<span class="date">' + clicked + ' ' + e.type + '</span>');
+          });
+
+          });
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getters_setters</title>
+</head>
+<body>
+ <p id="demo"></p>
+ <script>
+  // Create an object:
+  var person = {
+      firstName: "John",
+      lastName : "Doe",
+      get fullName() {
+          return this.firstName + " " + this.lastName;
+      }
+    };
+  // Display data from the object using a getter:
+   document.getElementById("demo").innerHTML = person.fullName;
+ </script>
+
+</body>
+</html>

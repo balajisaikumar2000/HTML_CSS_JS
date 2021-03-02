@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add-element</title>
+</head>
+<body>
+  <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul id="todo">
+          <li id="one" class="hot"><em>fresh</em> figs</li>
+          <li id="two" class="hot">pine nuts</li>
+          <li id="three" class="hot">honey</li>
+          <li id="four">balsamic vinegar</li>
+      </ul>
+  </div>
+  <script>
+       /*  //Create a new element and store it in a variable.
+      var newE1 = document.createElement('li');
+      //Create a text node and store it in a variable.
+      var newText = document.createTextNode('quinoa');
+      //Attach the new text node to the new element.
+      newE1.appendChild(newText);
+      //Find the position where the new element should be added.
+      var position = document.getElementsByTagName('ul')[0];
+      //Insert the new element into its position.
+      position.appendChild(newE1);       */
+      var removeE1 = document.getElementsByTagName('li').item(3);   //The element to remove
+
+      var containerE1 = removeE1.parentNode;                 //Its containing element
+
+      containerE1.removeChild(removeE1);                     //Removing the element
+  </script>
+</body>
+</html>

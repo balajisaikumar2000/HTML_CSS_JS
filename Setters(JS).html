@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setters</title>
+</head>
+<body>
+ <p id="demo"></p>
+ <script>
+     // Create an object:
+   var person = {                          /*this is for getter:---   what's the diffenece between normally acccesing the function and gettingor
+     firstName: "John",                                   setting means first one is acccessing through function (),second one accessing through
+     lastName : "Doe",                                    property */
+     language : "NO",
+     set lang(value) {
+         this.language = value;
+     }
+  };
+    // Set a property using set:
+   person.lang = "telugu";
+    // Display data from the object:
+     document.getElementById("demo").innerHTML = person.language;
+ </script>
+
+</body>
+</html>

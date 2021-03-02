@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First & Child</title>
+    <style type="text/css">
+        body{
+            color:white;
+            background-color:silver;}
+        ul{
+          width:200px;}
+        li{
+           border:1px solid silver;}
+        .hot{
+            background-color:#d7666b;}
+        .cool{
+            background-color:#6cc0ac;}
+        .complete{
+            background-color:green;}
+
+    </style>
+</head>
+<body>
+ <ul
+     ><li id="one" class="hot"><em>fresh</em> figs</li
+     ><li id="two" class="hot">pine nuts</li
+     ><li id="three" class="hot">honey</li
+     ><li id="four" class="hot">balsamic vinegar</li
+ ></ul>
+ <script>
+     var startItem = document.getElementsByTagName('ul')[0];
+     var firstItem = startItem.firstChild;
+     var lastItem = startItem.lastChild;
+
+     firstItem.setAttribute('class','complete');
+     lastItem.setAttribute('class','cool');
+
+ </script>
+</body>
+</html>

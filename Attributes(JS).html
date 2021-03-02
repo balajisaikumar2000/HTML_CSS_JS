@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attributes</title>
+</head>
+<body>
+  <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot">fresh figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+      </ul>
+  </div>
+  <script src ="jquery-3.5.1.js"></script>
+  <script>
+       $(function(){
+        $('li#three').removeAttr('class');
+        $('li.hot').addClass('favorite');
+        $('ul').attr('id','group');
+       });
+  </script>
+</body>
+</html>

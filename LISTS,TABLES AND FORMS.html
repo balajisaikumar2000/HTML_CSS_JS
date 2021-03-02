@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LISTS,TABLES AND FORMS</title>
+    <style type="text/css">
+        ul{
+          list-style:square inside;
+          width:150px;}
+        li{
+          margin:10px 0px 0px 0px;}
+        body{
+          font-family:Arial,Verdana,sans-serif;
+          color:#111111;}
+        table{
+          width:600px;}
+        th,td{
+          border:2px solid #0088dd;
+          padding:7px 10px 10px 10px;}
+        th{
+           text-transform:uppercase;
+           letter-spacing:0.1em;
+           font-size:90%;
+           border-bottom:2px solid #111111;
+           border-top : 1px solid #999;
+           text-align:left;}
+        tr.even{
+           background-color:#efefef;}
+        tr:hover{
+           background-color:#c3e6e5;}
+        .money{
+           text-align:right;}
+        h2{
+           text-align:center;
+           text-decoration:underline;}
+        input:hover{
+            background-color:white;}
+        td{
+            padding:15px;
+            background-color:#0088d;}
+        table.one{
+           border-spacing:5px 15px;}
+        table.two{
+           border-collapse:collapse;}
+    </style>
+</head>
+<body>
+ <h1>Quotes from Edgar Allan Poe.</h1>
+ <ul>
+     <li>I have great faith in fools;self-confidence my friends call  it.</li>
+     <li>All that we see or seems is a dream but within a dream.</li>
+     <li>I would define ,in  brief,th epoetry of words as the rhythmical creation of Beauty.</li>
+ </ul>
+ <hr>
+ <h2>First Edition Auctions</h2>
+ <table>
+     <tr>
+         <th>Authors</th>
+         <th>Title</th>
+         <th class="money">Reserve Price</th>
+         <th class="money">Current</th>
+     </tr>
+     <tr>
+         <td>E.E.Cummings</td>
+         <td>Tulips & Chimneys</td>
+         <td class="money">$2,000.00</td>
+         <td class="money">$2,642.50</td>
+     </tr>
+     <tr class="even">
+         <td>Charles d'Orlens</td>
+         <td>Poems</td>
+         <td class="money"></td>
+         <td class="money">$5,866.00</td>
+     </tr>
+     <tr>
+         <td>T.S.Eliot</td>
+         <td>poems 1909-1925</td>
+         <td class="money">$1,250.00"</td>
+         <td class="money">$8,499.35</td>
+     </tr>
+     <tr class="even">
+         <td>Sylvia</td>
+         <td>The Colossus</td>
+         <td class="money"><input type="text" name="namer" placeholder="enter here.." /></td>
+         <td class="money">$1031.72</td>
+     </tr>
+ </table>
+ <hr>
+ <table class="one">
+     <tr>
+         <td>1</td>
+         <td>2</td>
+     </tr>
+     <tr>
+         <td>3</td>
+         <td>4</td>
+     </tr>
+ </table>
+ <hr>
+ <table class="two">
+     <tr>
+         <td>1</td>
+         <td>2</td>
+     </tr>
+     <tr>
+         <td>3</td>
+         <td></td>
+     </tr>
+ </table>
+
+</body>
+</html>

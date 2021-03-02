@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STYLING_IMAGES</title>
+    <style type="text/css">
+        img.one{
+           border-radius:50%;}
+        img.two{
+           border:1px solid #ddd;
+           border-radius:4px;
+           padding:5px;
+           width:150px;}
+        img.two:hover{
+           box-shadow:0 0 2px 1px rgba(0,140,186,0.5);}
+        img.three{
+           opacity:0.5;}
+        img.four{
+           max-width:100%;
+           height:auto;}
+        div img{
+           width:33%;
+           height:auto;
+           float:left;
+           max-width:235px;}
+        .blur{filter:blur(4px);}
+        .brightness{filter:brightness(250%);}
+        .contrast{filter:contrast(180%);}
+        .grayscale{filter:hue-rotate(180deg);}
+        .invert{filter:invert(100%);}
+        .opacity{filter:invert(100%);}
+        .saturate{filter:saturate(7);}
+        .sepia{filter:sepia(100%);}
+        .shadow{filter:drop-shadow(8px 8px 10px green);}
+    </style>
+</head>
+<body>
+ <h1>This is a example for border-radius</h1>
+ <p>Use the border-radius property to create rounded images:</p>
+ <img class="one" src="images/city.jpg" alt="City" width="300" height="300">
+ <hr>
+ <h2>Thumbnail Image as Link</h2>
+ <p>Use the border property to create thumbnail images.Wrap an anchor around the
+    image to use it as a link</p>
+ <p>Hover over the image and click on it io see effect</p>
+ <a href="images/city.jpg" target="_blank"><img class="two" src="images/city.jpg" alt="city" width="150"; height="150"></a>
+ <hr>
+ <h1>Image Transparency</h1>
+ <p>The opacity property specifies the transparency of an element.The lower the value,the more transparent:</p>
+ <p>Image with 50% opacity:</p>
+ <img class="three" src="images/city.jpg" alt="city" width="170" height="100">
+ <hr>
+ <p><strong>Note:</strong> The filter is not supported in Internet Explorer or Edge 12.</p>
+ <div>
+ <img  src="images/Helianthus.jpg" alt="Cinque Terre" width="300" height="300">
+ <img class="blur" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img  class="brightness" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img class="contrast" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img class="grayscale" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img class="huerotate" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img class="invert" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img class="opacity" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img class="saturate" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img class="sepia" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ <img class="shadow" src="images/Helianthus.jpg" alt="Pineapple" width="300" height="300">
+ </div>
+</body>
+</html>

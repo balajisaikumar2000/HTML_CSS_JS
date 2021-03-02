@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example_5</title>
+    <style type="text/css">
+
+ body{
+     background-color:#ff8c91;}
+ h1,h2{
+     text-align:center;
+     text-shadow:-2px -2px 8px black;}
+
+ul{
+   width:200px;
+   margin:10px auto;}
+.hot {
+	background-color: #d7666b;
+	color: #fff;
+	text-shadow: 2px 2px 1px #914141;
+	border-top: 1px solid #e99295;
+	border-bottom: 1px solid #914141;}
+
+.cool {
+	background-color: #6cc0ac;
+	color: #fff;
+	text-shadow: 2px 2px 1px #3b6a5e;
+	border-top: 1px solid #7ee0c9;
+	border-bottom: 1px solid #3b6a5e;}
+    </style>
+</head>
+<body>
+   <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one"><em>fresh</em> figs</li>
+        <li id="two">pine nuts</li>
+        <li id="three">honey</li>
+        <li id="four">balsamic vinegar</li></ul>
+   </div>
+   <script>
+        // ADDING ITEMS TO START AND END OF LIST
+var list = document.getElementsByTagName('ul')[0];                 // Get the <ul> element
+
+// ADD NEW ITEM TO END OF LIST
+var newItemLast = document.createElement('li');                    // Create element
+var newTextLast = document.createTextNode('cream');                // Create text node
+newItemLast.appendChild(newTextLast);                              // Add text node to element
+list.appendChild(newItemLast);                                     // Add element end of list
+
+// ADD NEW ITEM START OF LIST
+var newItemFirst = document.createElement('li');                   // Create element
+var newTextFirst = document.createTextNode('kale');                // Create text node
+newItemFirst.appendChild(newTextFirst);                            // Add text node to element
+list.insertBefore(newItemFirst, list.firstChild);                  // Add element to list
+
+
+
+var listItems = document.getElementsByTagName('li');                   // All <li> elements
+
+// ADD A CLASS OF COOL TO ALL LIST ITEMS
+var i;                                                             // Counter variable
+
+for (i = 0; i < listItems.length; i++) {                           // Loop through elements
+  listItems[i].className = 'cool';                                 // Change class to cool
+}
+
+// ADD NUMBER OF ITEMS IN THE LIST TO THE HEADING
+var heading = document.querySelector('h2');                        // h2 element
+var headingText = heading.firstChild.nodeValue;                    // h2 text
+var totalItems = listItems.length;                                 // No. of <li> elements
+var newHeading =  headingText +  totalItems;                      // Content
+heading.textContent = newHeading;
+</script>
+
+</body>
+</html>

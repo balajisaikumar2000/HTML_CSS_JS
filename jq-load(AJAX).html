@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-load</title>
+</head>
+<body>
+ <nav>
+     <a href="jq-load.html" class="current">Home</a>
+     <a href="jq-load2.html">Route</a>
+     <a href="jq-load3.html">Toys</a>
+ </nav>
+ <section id="content">
+     <div id="container">
+         <!--Page Content lives here --->
+     </div>
+ </section>
+ <script src="jquery-3.5.1.js"></script>
+ <script>
+     $('nav a').on('click',function(e){
+     e.preventDefault();
+     var url = this.href;
+
+     $('nav a.current').removeClass('current');
+     $(this).addClass('current');
+
+     $('#container').remove();
+     $('#content').load(url + ' #content').hide().fadeIn('slow');
+     });
+ </script>
+
+</body>
+</html>

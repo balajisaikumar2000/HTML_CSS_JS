@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>while-loop</title>
+</head>
+<body>
+ <img src="images/teacher.png" />
+ <div id="answer"></div>
+ <script>
+     var i = 1;        //Set counter to 1
+     var msg = '';      //Message
+
+     // Store 5 tim,es table in a variable
+     while(i<=10){
+      msg +=i + 'x 5 = ' + (i * 5) + '</br />';
+      i++;
+      }
+      document.getElementById('answer').innerHTML = msg;
+ </script>
+
+</body>
+</html>

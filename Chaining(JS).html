@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chaining</title>
+</head>
+<body>
+ <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+      </ul>
+ </div>
+ <script src="jquery-3.5.1.js"></script>
+ <script>
+     $('li[id!="one"]')
+     .hide()
+     .delay(500)
+     .fadeIn(1400);
+ </script>
+
+</body>
+</html>

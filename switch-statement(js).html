@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch-statment</title>
+</head>
+<body>
+  <section id="page1">
+      <h1>Bullseye</h1>
+      <img src="images/teacher.png" id="teacher" alt="teacher" />
+      <section id="answer"></section>
+  </section>
+ <script>
+var msg;        // Message
+  // Level
+
+// Determine message based on level
+switch (5) {
+case 1:
+    msg = 'Good luck on the first test';
+    break;
+
+case 2:
+    msg = 'Second of three - keep going!';
+    break;
+
+case 3:
+    msg = 'Final round, almost there!';
+    break;
+
+default:
+    msg = 'Good luck!';
+    break;
+}
+
+var el = document.getElementById('answer');
+el.textContent = msg;
+ </script>
+
+</body>
+</html>

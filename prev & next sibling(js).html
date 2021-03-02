@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get-class-name</title>
+    <style type="text/css">
+        body{
+            color:white;
+            background-color:silver;}
+        ul{
+          width:200px;}
+        li{
+           border:1px solid silver;}
+        .hot{
+            background-color:#d7666b;}
+        .cool{
+            background-color:#6cc0ac;}
+
+    </style>
+</head>
+<body>
+<ul><li id="one" class="hot"><em>fresh</em> figs</li><li id="two" class="hot">pine nuts</li><li id="three" class="hot">honey</li><li id="four" class="hot">balsamic vinegar</li></ul>
+
+  <script>
+      var startItem = document.getElementById('two');
+      var prevItem = startItem.previousSibling;
+      var nextItem = startItem.nextSibling;
+      nextItem.className = 'cool';
+      prevItem.className = 'complete';
+
+  </script>
+
+</body>
+</html>

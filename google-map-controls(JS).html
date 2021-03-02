@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>google-map-controls</title>
+    <style>
+        html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;}
+      #map {
+        width: 400px;
+        height: 400px;
+        margin: 50px;}
+    </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+      function init() {
+  // the mapOptions object contains the information to initialise the map to how we want it
+  var mapOptions = {
+    zoom: 14,
+    center: new google.maps.LatLng(40.782710,-73.965310),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+    panControl: false,           //false means hide
+    zoomControl: true,            //true will show the control
+    zoomControlOptions: {           //each control has it's own styling,options property
+      style: google.maps.ZoomControlStyle.LARGE,
+      position: google.maps.ControlPosition.TOP_RIGHT
+    },
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+      position: google.maps.ControlPosition.TOP_LEFT
+    },
+    scaleControl: true,
+    scaleControlOptions: {
+      position: google.maps.ControlPosition.TOP_CENTER
+    },
+    streetViewControl: false,
+    overviewMapControl: false
+  };
+  var venueMap = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.src = 'http://maps.googleapis.com/maps/api/js?sensor=false&callback=init';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+  </script>
+
+</body>
+</html>
